@@ -11,5 +11,12 @@ pipeline {
                 sh "git clone https://github.com/Akshiv20/java-hello-world-with-maven.git"
             }
         }
+        stage('Build') {
+            steps {
+                dir('java-hello-world-with-maven') {
+                    sh "mvn clean install"
+                }
+            }
+        }
     }
 }
