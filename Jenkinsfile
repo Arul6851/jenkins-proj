@@ -1,8 +1,10 @@
 pipeline {
     agent any
-    stages ('Cleanup') {
-        steps {
-            DeleteDir{}
+    stages {
+        stage('Clean Up') {
+            steps {
+                deleteDir{}
+            }
         }
     }
 }
