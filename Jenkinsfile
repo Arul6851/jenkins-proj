@@ -18,5 +18,12 @@ pipeline {
                 }
             }
         }
+        stage('Test') {
+            steps {
+                dir('java-hello-world-with-maven') {
+                    sh "mvn test"
+                }
+            }
+        }
     }
 }
